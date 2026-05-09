@@ -4,7 +4,7 @@ routes =Blueprint('routes', __name__)
 @routes.route('/')
 def home():
     return render_template("home.html")
-@routes.route('/sign_up')
+@routes.route('/signup', methods = ["GET", "POST"])
 def sign_up():
     return render_template("signup.html")
 @routes.route('/login')

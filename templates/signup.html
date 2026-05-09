@@ -1,24 +1,82 @@
-{% extends "index.htm" %} {% block title %} S'enregistrer - Contact SpaceMContact {% endblock %}
+{% extends "index.html" %} {% block title %} S'enregistrer - Contact SpaceMContact {% endblock %}
 {% block content %}
-<div class="cadre">
-    <div class="title"><h2>S'inscrire</h2></div>
-    <div class="formulaire">
-        <form action="" method="POST">
-            <label for="nom">Nom d'utilisateur : </label>
-            <div class="input">
-                <input type="text" id="non" name="nom">
+<div class="container">
+    <!-- login form -->
+    <div class="form-box login">
+        <form action="#" method="POST">
+            <h1>Connexion</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Nom d'utilisateur" required name="nom">
+                <i class="fa-solid fa-user" style="color: rgb(10, 10, 10);"></i>
             </div>
-            <label for="email">Email :</label>
-            <div class="input">
-                <input type="email" id="email" name="email">
+            <div class="input-box">
+                <input type="password" placeholder="mot de passe" required name="mdp">
+                <i class="fa-solid fa-lock"></i>
             </div>
-            <label for="mdp">Mot de passe :</label>
-            <div class="input">
-                <input type="password" id="mdp" name="mdp">
+            
+            <div class="forget-link">
+                <a href="#">Mot de passe oublié ?</a>
+                <button type="submit" class="btn">Se Connecter</button>
+                <p>ou se connecter avec une plateforme sociale</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-google"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <input type="submit" class="slide-left" name="submit" value="S'enregistrer">
-            <a href="/login"><p>Vous avez déjà un compte ?</p></a>
+        
         </form>
+        
+    </div>
+
+    <!-- register form -->
+    <div class="form-box register">
+    <form action="#" method="POST">
+        <h1>Inscription</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Nom d'utilisateur" required name="nom">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="email" placeholder="Email" required name="email">
+            <i class="fa-solid fa-envelope"></i>
+    
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="mot de passe" required name="mdp">
+            <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="forget-link">
+    
+            <button type="submit" class="btn">S'inscrire</button>
+            <p>ou s'inscrire avec une plateforme sociale</p>
+            <div class="social-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+    </form>
+    </div>
+
+    <!-- toggle box -->
+    <div class="toggle-box">
+        <!-- toggle box letf-->
+        <div class="toggle-panel toggle-left">
+            <h1>Salut, Bienvenue !</h1>
+            <p>Vous n'avez pas de compte?</p>
+            <button class="btn register-btn">S'inscrire</button>
+        </div>
+        <!-- toggle box right-->
+        <div class="toggle-panel toggle-right">
+            <h1>Bienvenue à nouveau</h1>
+            <p>Vous avez déjà un compte ?</p>
+            <button class="btn login-btn">Se Connecter</button>
+        </div>
     </div>
 </div>
+
 {% endblock %}

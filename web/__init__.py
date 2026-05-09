@@ -1,12 +1,5 @@
-# from  flask import Flask
-# def create_app():
-#     app = Flask(__name__)
-#     from route import routes
-#     app.register_blueprint(routes, url_prefix='/')
-#     return app
 import os
 from flask import Flask
-
 def create_app():
     base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
@@ -17,6 +10,6 @@ def create_app():
     )
 
     from route import routes
-    app.register_blueprint(routes)
+    app.register_blueprint(routes, url_prefix='/')
 
     return app
