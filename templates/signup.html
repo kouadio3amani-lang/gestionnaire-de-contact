@@ -1,0 +1,24 @@
+{% extends "index.htm" %} {% block title %} S'enregistrer - Contact SpaceMContact {% endblock %}
+{% block content %}
+<div class="cadre">
+    <div class="title"><h2>S'inscrire</h2></div>
+    <div class="formulaire">
+        <form action="" method="POST">
+            <label for="nom">Nom d'utilisateur : </label>
+            <div class="input">
+                <input type="text" id="non" name="nom">
+            </div>
+            <label for="email">Email :</label>
+            <div class="input">
+                <input type="email" id="email" name="email">
+            </div>
+            <label for="mdp">Mot de passe :</label>
+            <div class="input">
+                <input type="password" id="mdp" name="mdp">
+            </div>
+            <input type="submit" class="slide-left" name="submit" value="S'enregistrer">
+            <a href="/login"><p>Vous avez déjà un compte ?</p></a>
+        </form>
+    </div>
+</div>
+{% endblock %}
