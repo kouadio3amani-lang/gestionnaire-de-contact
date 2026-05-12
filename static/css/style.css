@@ -204,3 +204,41 @@ form {
     background: transparent;
     border: 2px solid #fff;
 }
+.alert {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.alert-error{
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    text-align: center;
+    background: #eee;
+}
+.alert-correct {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    text-align: center;
+    background: #eee;
+}
+.alert-warning {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    text-align: center;
+    background: #eee;
+}

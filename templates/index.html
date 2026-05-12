@@ -8,6 +8,28 @@
     <title>{% block title %} Inscription for SpaceMContact {% endblock %}</title>
 </head>
 <body>
+    {% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            {% if category == 'error' %}
+                <div class=" alert alert-error">
+                    {{message}}
+                </div>
+            {% elif category == 'warning' %}
+                <div class="alert alert-warning">
+                    {{ message }}
+                </div>
+
+            {% else %}
+                <div class=" alert alert-correct">
+                    {{message}}
+                </div>
+            {%endif%}
+        {% endfor%}
+    {% endif %}
+    {% endwith %}
+
+
 {%block content%}
 {% endblock %}    
 </body>
