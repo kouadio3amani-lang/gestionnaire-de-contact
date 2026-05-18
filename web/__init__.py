@@ -35,7 +35,7 @@ def create_app():
         db.create_all()
     login_manager = LoginManager()
     login_manager.login_message = 'S\'il-vous plaît connectez-vous, notre plateforme n\'est plus le même sans vous'
-    login_manager.login_view = 'routes.auth'
+    login_manager.login_view = 'routes.authentified'
     login_manager.init_app(app)
     @login_manager.user_loader
     def load_user(user_id):

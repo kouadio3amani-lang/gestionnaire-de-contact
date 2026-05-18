@@ -11,7 +11,7 @@ setTimeout(function () {
     let alerts = document.querySelectorAll('.alert, .alert-correct, .alert-error, .alert-success, .alert-warning');
 
     alerts.forEach(function(alert) {
-        alert.style.transition = "0.5s";
+        alert.style.transition = "0.4s";
         alert.style.opacity = "0";
 
         setTimeout(() => {
@@ -19,5 +19,5 @@ setTimeout(function () {
         }, 500); 
     });
 
-}, 8000); 
+}, 5000); 
 
